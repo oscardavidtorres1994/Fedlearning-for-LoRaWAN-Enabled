@@ -1,7 +1,7 @@
 # README: Autoencoder for Anomaly Detection on IIoT
 
 ## Overview
-This repository contains a Jupyter Notebook implementing an autoencoder for anomaly detection. The autoencoder is a type of neural network used to learn a compressed representation of data, which helps identify unusual patterns or anomalies.
+This repository contains a Jupyter Notebook that implements an autoencoder for anomaly detection.   Base repository of the work “Federated Learning framework for LoRaWAN-enabled IIoT communication: A case study”
 
 ## Requirements
 Ensure you have Python installed along with the following libraries:
@@ -9,16 +9,21 @@ Ensure you have Python installed along with the following libraries:
 pip install notebook numpy pandas scikit-learn tensorflow
 ```
 
-## Running the Notebook
-1. Start Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
-2. Open the provided notebook.
-3. Run all cells to train the autoencoder and detect anomalies.
+## Codes
+
+The repository has the main codes for validating data and anomaly detection models. There are three centralized model codes:
+- AutoencoderCentralized
+- IsolationForest
+- OneClassSVM
+
+and one decentralized model federated learning
+
+-AutoencoderFedLearning
 
 ## Datasets
+Within the folder "/Data Sample" there are 4 datasets: 
 
+- Complete.csv
 - Train.csv
 - Validation.csv
 - Test.csv
@@ -27,8 +32,8 @@ pip install notebook numpy pandas scikit-learn tensorflow
 ## How It Works
 - The autoencoder is trained using Train.csv data.
 - After training, it reconstructs inputs and calculates the reconstruction error.
-- Optimized thresholds are calculated using Validation.csv 
-- Anomalies are detected based on a threshold applied to the reconstruction error.
+- If you are using autoencoder a optimized thresholds are calculated using Validation.csv 
+- Anomalies are detected in each type of anomaly detection model.
 
 ## Results
 The model outputs metrics are calculated over Test.csv. The metrics are accuracy, precision, recall, F1-score, TNR, TPR and a confusion matrix to evaluate anomaly detection performance, saved on results.csv.
