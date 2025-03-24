@@ -1,24 +1,16 @@
-# README: Autoencoder for Anomaly Detection on IIoT
+# README: Anomaly Detection Methods for IIoT for LoRaWAN Enabled. 
 
 ## Overview
-This repository contains a Jupyter Notebook that implements an autoencoder for anomaly detection.   Base repository of the work “Federated Learning framework for LoRaWAN-enabled IIoT communication: A case study”
+This repository contains implementations of four different anomaly detection methods for Industrial IoT (IIoT) for LoRaWAN Enabled environments. Each method is organized in its own folder, containing a Jupyter Notebook and a README file with specific details.  Base repository of the work “Federated Learning framework for LoRaWAN-enabled IIoT communication: A case study”
 
-## Requirements
-Ensure you have Python installed along with the following libraries:
-```bash
-pip install notebook numpy pandas scikit-learn tensorflow
-```
+## Structure
 
-## Codes
+Autoencoder Centralized/ - Implements a centralized autoencoder-based anomaly detection method.
+Autoencoder Federated Learning/ - Implements a descentralized autoencoder-based anomaly detection method.
+IsolationForest/ - Implements Isolation Forest for anomaly detection.
+OneClassSVM/ - Implements One-Class SVM for anomaly detection.
+Data Sample/ - Contains the datasets used for training, validation, and testing.
 
-The repository has the main codes for validating data and anomaly detection models. There are three centralized model codes:
-- AutoencoderCentralized
-- IsolationForest
-- OneClassSVM
-
-and one decentralized model federated learning
-
--AutoencoderFedLearning
 
 ## Datasets
 Within the folder "/Data Sample" there are 4 datasets: 
@@ -28,15 +20,8 @@ Within the folder "/Data Sample" there are 4 datasets:
 - Validation.csv
 - Test.csv
 
-
-## How It Works
-- The autoencoder is trained using Train.csv data.
-- After training, it reconstructs inputs and calculates the reconstruction error.
-- If you are using autoencoder a optimized thresholds are calculated using Validation.csv 
-- Anomalies are detected in each type of anomaly detection model.
-
-## Results
-The model outputs metrics are calculated over Test.csv. The metrics are accuracy, precision, recall, F1-score, TNR, TPR and a confusion matrix to evaluate anomaly detection performance, saved on results.csv.
+## How to Use
+Each folder contains its own README file with detailed instructions on how to install dependencies, run the Jupyter Notebook, and interpret the results.
 
 ## License
 This project is open-source and free to use.

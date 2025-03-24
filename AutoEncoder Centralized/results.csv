@@ -1,0 +1,2 @@
+Accuracy,Precision,Recall,F1 Score,ROC AUC,PR AUC,TP,TN,FP,FN,TPR,FNR,TNR,FPR
+85.86%,95.40%,89.25%,92.22%,61.29%,95.24%,83,2,4,10,89.25%,10.75%,33.33%,66.67%
